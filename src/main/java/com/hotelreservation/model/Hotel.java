@@ -2,38 +2,44 @@ package com.hotelreservation.model;
 
 import java.util.Comparator;
 
-public class Hotel implements Comparator<Hotel> {
+public class Hotel{
        private String name;
-       private int rates;
+       private int weekdayRates;
+       private int weekendRates;
 
-        public Hotel(String name, int rates) {
+        public Hotel(String name, int weekdayRates, int weekendRates) {
             this.name = name;
-            this.rates = rates;
+            this.weekdayRates = weekdayRates;
+            this.weekendRates = weekendRates;
         }
 
         public void setName(String name) {
             this.name = name;
         }
 
-        public void setRates(int rates) {
-            this.rates = rates;
-        }
+    public void setWeekdayRates(int weekdayRates) {
+        this.weekdayRates = weekdayRates;
+    }
 
-        public String getName() {
+    public void setWeekendRates(int weekendRates) {
+        this.weekendRates = weekendRates;
+    }
+
+    public String getName() {
             return name;
         }
 
-        public int getRates() {
-            return rates;
-        }
+    public int getWeekdayRates() {
+        return weekdayRates;
+    }
+
+    public int getWeekendRates() {
+        return weekendRates;
+    }
 
     @Override
     public String toString() {
         return name;
     }
 
-    @Override
-    public int compare(Hotel h1, Hotel h2) {
-        return h1.rates - h2.rates;
-    }
 }
