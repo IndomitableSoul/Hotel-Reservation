@@ -10,4 +10,11 @@ public class HotelReservationTest {
         boolean result = hotelReservation.addHotel();
        Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenToFindCheapestHotel_WhenFoundSuccessfully_ShouldReturnTrue() {
+        HotelReservation hotelReservation = new HotelReservation();
+        boolean result = hotelReservation.findCheapestHotelOnGivenDate();
+        Assert.assertTrue(result);
+    }
 }

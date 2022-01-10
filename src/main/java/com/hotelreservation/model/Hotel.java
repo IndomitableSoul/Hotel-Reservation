@@ -1,6 +1,8 @@
 package com.hotelreservation.model;
 
-public class Hotel {
+import java.util.Comparator;
+
+public class Hotel implements Comparator<Hotel> {
        private String name;
        private int rates;
 
@@ -24,4 +26,14 @@ public class Hotel {
         public int getRates() {
             return rates;
         }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public int compare(Hotel h1, Hotel h2) {
+        return h1.rates - h2.rates;
+    }
 }
